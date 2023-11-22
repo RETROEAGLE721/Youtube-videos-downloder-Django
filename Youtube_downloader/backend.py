@@ -8,7 +8,7 @@ def load_index(request):
 def load_info(request):
     
     global video,link
-    if "https://www.youtube.com/" in request.POST.get('url'):
+    try:
         link = request.POST['url']
         video = YouTube(link)
         stream = []
@@ -20,7 +20,7 @@ def load_info(request):
             elif x.type == "audio":
                 stream.append((x.itag,x.abr,size))
         return render(request,'index.html',{'res':stream,'url':link})
-    else:
+    except:
         return render(request,'index.html',{'info':"Please enter youtube video url",'url':link})
     
 def download_video(request):
