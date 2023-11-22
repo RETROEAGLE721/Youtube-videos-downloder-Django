@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-61gh77*-(%rj0sjb68_y$y@y4ha$=(e_##bv0-nsk3s+2&he36
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://tubevid.onrender.com','13.228.225.19','18.142.128.26','54.254.162.138']
+ALLOWED_HOSTS = ['tubevid.onrender.com','13.228.225.19','18.142.128.26','54.254.162.138']
 
 
 # Application definition
