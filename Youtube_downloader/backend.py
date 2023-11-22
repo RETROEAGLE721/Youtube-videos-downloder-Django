@@ -19,7 +19,6 @@ def load_info(request):
                 stream.append((x.itag,x.resolution,size))
             elif x.type == "audio":
                 stream.append((x.itag,x.abr,size))
-        print(stream)
         return render(request,'index.html',{'res':stream,'url':link})
     else:
         return render(request,'index.html',{'info':"Please enter youtube video url",'url':link})
